@@ -44,7 +44,7 @@ class _HangmanAppState extends State<HangmanApp> {
     choisirMotAleatoire();
   }
 
-  // Choisir un mot aléatoire à deviner
+  
   void choisirMotAleatoire() {
     var rng = new Random();
     List<String> keys = dictionnaire.keys.toList();
@@ -53,7 +53,7 @@ class _HangmanAppState extends State<HangmanApp> {
     motCache = motADeviner.replaceAll(RegExp(r'[a-zA-Z]'), '*');
   }
 
-  // Vérifier si la lettre devinée est dans le mot
+  
   void verifierLettre(String lettre) {
     setState(() {
       if (motADeviner.contains(lettre)) {
@@ -96,16 +96,16 @@ class _HangmanAppState extends State<HangmanApp> {
         },
       );
     } else if (!motCache.contains('*')) {
-      // L'utilisateur a deviné le mot correctement
+  
       showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Gagné!'),
-            content: Text('Le mot était: $motADeviner'),
+            title: Text('ou genyen'),
+            content: Text('mo an se: $motADeviner'),
             actions: <Widget>[
               FlatButton(
-                child: Text('Rejouer'),
+                child: Text('Rejwe'),
                 onPressed: () {
                   Navigator.of(context).pop();
                   restartGame();
@@ -118,7 +118,7 @@ class _HangmanAppState extends State<HangmanApp> {
     }
   }
 
-  // Redémarrer le jeu
+  
   void restartGame() {
     setState(() {
       chans = 5;
@@ -134,7 +134,7 @@ class _HangmanAppState extends State<HangmanApp> {
         title: Row(
           children: [
             Text('Hangman'),
-            SizedBox(width: 8), // Espace entre le texte et l'icône
+            SizedBox(width: 8), 
             IconButton(
               icon: Icon(Icons.star),
               onPressed: () {
