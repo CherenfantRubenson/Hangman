@@ -9,9 +9,9 @@ MEMBRE
 -Rubenson CHERENFANT
 -Wenson Alseil
 - Samuel BORGELAS
-- Arbens Vital
--******
-*******
+- Hraldy Debrosse
+-Polycarpe Aldelson
+-Gislain Yvon Gerah Faye
 
 This project is a starting point for a Flutter application.
 
